@@ -10,13 +10,18 @@ HAUTEUR = 600
 fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
 clock = pygame.time.Clock()
 continuer = True
+bouger = True
 
 perso = pygame.sprite.Sprite()
 pygame.sprite.Sprite.__init__(perso)
-perso.image = pygame.image.load("Diplodocus_personnage.png").convert_alpha()
+perso.image = pygame.image.load("Blue_rectangle.png").convert_alpha()
 perso.rect = perso.image.get_rect()
 perso.rect.x = 50
 perso.rect.y = 50
+while bouger:
+    perso.rect.x -=5
+    if perso.rect.x == 0:
+        perso.rect.x = 50
 
 liste_des_sprites = pygame.sprite.LayeredUpdates()
 liste_des_sprites.add(perso)
