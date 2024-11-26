@@ -11,21 +11,17 @@ class Dinosaure(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = 100
         self.rect.y = 100
-    def sauter(self):
-        if perso.rect.y = sol.rect.y:
-            vitesse == 0
-        else:
-            vitesse -= 9.81
-    def se_baisser(self):
 
 class Objet:
     def __init__(self):
+        pass
 
 class Obstacle:
     def __init__(self, vitesse_obstacle):
         self.vitesse_obstacle = vitesse_obstacle
 
 class Obstacle_sol(Obstacle):
+    pass
 
 
 pygame.init()
