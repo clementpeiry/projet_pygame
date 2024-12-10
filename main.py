@@ -38,10 +38,6 @@ perso.image = pygame.image.load("Blue_rectangle.png").convert_alpha()
 perso.rect = perso.image.get_rect()
 perso.rect.x = 50
 perso.rect.y = 50
-while bouger:
-    perso.rect.x -=5
-    if perso.rect.x == 0:
-        perso.rect.x = 50
 
 liste_des_sprites = pygame.sprite.LayeredUpdates()
 liste_des_sprites.add(perso)
@@ -52,8 +48,10 @@ while continuer:
     liste_des_sprites.draw(fenetre)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
-
+            continuer = False
+    perso.rect.x -=5
+    if perso.rect.x == 0:
+        perso.rect.x = 50
     pygame.display.flip()
     fenetre.fill((0, 0, 0))
     clock.tick(60)
