@@ -1,8 +1,6 @@
 print("Projet Pygame")
 
 import pygame
-from pygame.locals import *
-from random import *
 
 class Dinosaure(pygame.sprite.Sprite):
     def __init__(self):
@@ -12,52 +10,60 @@ class Dinosaure(pygame.sprite.Sprite):
         self.rect.x = 100
         self.rect.y = 100
     def sauter(self):
-        if perso.rect.y = sol.rect.y:
-            vitesse == 0
+        if self.rect.y == 400:
+            self.vitesse == 0
         else:
-            vitesse -= 9.81
+            self.vitesse -= 9.81
     def se_baisser(self):
+        pass
 
 class Objet:
+    pass
     def __init__(self):
+        pass
 
 class Obstacle:
+    pass
     def __init__(self, vitesse_obstacle):
         self.vitesse_obstacle = vitesse_obstacle
 
 class Obstacle_sol(Obstacle):
+    pass
+
+fenetre = pygame.display.set_mode((640, 480))
 
 
-pygame.init()
-LARGEUR = 600
-HAUTEUR = 600
-fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
-clock = pygame.time.Clock()
+fond1 = pygame.sprite.Sprite()
+pygame.sprite.Sprite.__init__(fond1)
+fond1.image = pygame.image.load("Fondpygame.jpg").convert_alpha()
+fond1.rect = fond1.image.get_rect()
+fond1.rect.x = 0
+fond1.rect.y = 0
 continuer = True
-bouger = True
 
-perso = pygame.sprite.Sprite()
-pygame.sprite.Sprite.__init__(perso)
-perso.image = pygame.image.load("Blue_rectangle.png").convert_alpha()
-perso.rect = perso.image.get_rect()
-perso.rect.x = 50
-perso.rect.y = 50
-while bouger:
-    perso.rect.x -=5
-    if perso.rect.x == 0:
-        perso.rect.x = 50
+fond2 = pygame.sprite.Sprite()
+pygame.sprite.Sprite.__init__(fond2)
+fond2.image = pygame.image.load("Fondpygame.jpg").convert_alpha()
+fond2.rect = fond2.image.get_rect()
+fond2.rect.x = 1022
+fond2.rect.y = 0
 
 liste_des_sprites = pygame.sprite.LayeredUpdates()
-liste_des_sprites.add(perso)
-
+liste_des_sprites.add(fond1)
+liste_des_sprites.add(fond2)
 direction = "droite"
-
+clock = pygame.time.Clock()
 while continuer:
     liste_des_sprites.draw(fenetre)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
-
+            continuer = False
+    fond1.rect.x -= 2
+    fond2.rect.x -= 2
+    if fond1.rect.x == -1022:
+        fond1.rect.x = 1022
+    if fond2.rect.x == -1022:
+        fond2.rect.x = 1022
     pygame.display.flip()
     fenetre.fill((0, 0, 0))
     clock.tick(60)
