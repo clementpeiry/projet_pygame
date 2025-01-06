@@ -1,0 +1,299 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>print(\"Projet Pygame\")\r\n\r\nimport pygame\r\nfrom pygame.locals import *\r\nfrom random import *\r\n\r\nclass Dinosaure(pygame.sprite.Sprite):\r\n    def __init__(self):\r\n        super().__init__()\r\n        self.image = pygame.image.load(\"Diplodocus_personnage.png\").convert_alpha()\r\n        self.rect = self.image.get_rect()\r\n        self.rect.x = 100\r\n        self.rect.y = 100\r\n    def sauter(self):\r\n        if perso.rect.y = sol.rect.y:\r\n            vitesse == 0\r\n        else:\r\n            vitesse -= 9.81\r\n    def se_baisser(self):\r\n\r\nclass Objet:\r\n    def __init__(self):\r\n\r\nclass Obstacle:\r\n    def __init__(self, vitesse_obstacle):\r\n        self.vitesse_obstacle = vitesse_obstacle\r\n\r\nclass Obstacle_sol(Obstacle):\r\n\r\n\r\npygame.init()\r\nLARGEUR = 600\r\nHAUTEUR = 600\r\nfenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))\r\nclock = pygame.time.Clock()\r\ncontinuer = True\r\nbouger = True\r\n\r\nperso = pygame.sprite.Sprite()\r\npygame.sprite.Sprite.__init__(perso)\r\nperso.image = pygame.image.load(\"Blue_rectangle.png\").convert_alpha()\r\nperso.rect = perso.image.get_rect()\r\nperso.rect.x = 50\r\nperso.rect.y = 50\r\nwhile bouger:\r\n    perso.rect.x -=5\r\n    if perso.rect.x == 0:\r\n        perso.rect.x = 50\r\n\r\nliste_des_sprites = pygame.sprite.LayeredUpdates()\r\nliste_des_sprites.add(perso)\r\n\r\ndirection = \"droite\"\r\n\r\nwhile continuer:\r\n    liste_des_sprites.draw(fenetre)\r\n    for event in pygame.event.get():\r\n        if event.type == pygame.QUIT:\r\n            running = False\r\n\r\n    pygame.display.flip()\r\n    fenetre.fill((0, 0, 0))\r\n    clock.tick(60)\r\n\r\npygame.quit()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 522210e93e2d88327892015272a96934ee0a2328)
++++ b/main.py	(date 1735052590244)
+@@ -11,21 +11,17 @@
+         self.rect = self.image.get_rect()
+         self.rect.x = 100
+         self.rect.y = 100
+-    def sauter(self):
+-        if perso.rect.y = sol.rect.y:
+-            vitesse == 0
+-        else:
+-            vitesse -= 9.81
+-    def se_baisser(self):
+ 
+ class Objet:
+     def __init__(self):
++        pass
+ 
+ class Obstacle:
+     def __init__(self, vitesse_obstacle):
+         self.vitesse_obstacle = vitesse_obstacle
+ 
+ class Obstacle_sol(Obstacle):
++    pass
+ 
+ 
+ pygame.init()
+@@ -42,10 +38,6 @@
+ perso.rect = perso.image.get_rect()
+ perso.rect.x = 50
+ perso.rect.y = 50
+-while bouger:
+-    perso.rect.x -=5
+-    if perso.rect.x == 0:
+-        perso.rect.x = 50
+ 
+ liste_des_sprites = pygame.sprite.LayeredUpdates()
+ liste_des_sprites.add(perso)
+@@ -56,8 +48,10 @@
+     liste_des_sprites.draw(fenetre)
+     for event in pygame.event.get():
+         if event.type == pygame.QUIT:
+-            running = False
+-
++            continuer = False
++    perso.rect.x -=5
++    if perso.rect.x == 0:
++        perso.rect.x = 50
+     pygame.display.flip()
+     fenetre.fill((0, 0, 0))
+     clock.tick(60)
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1733904497629)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08__Changes_.xml	(date 1733904497629)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_11_12_2024_09_08_[Changes]" date="1733904490696" recycled="false" toDelete="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11.12.2024 09:08 [Changes]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1733904490696)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08_[Changes]/shelved.patch	(date 1733904490696)
+@@ -0,0 +1,41 @@
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"cbe76408-9917-4acf-aaa7-04586c6b7dd4\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/main.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2okk8OvBCP3wd7IMKWVCYbwjJHd\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Python.main.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$\" />\r\n      <recent name=\"$PROJECT_DIR$/projet_pygame\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-abccbe9d933a-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.428\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"cbe76408-9917-4acf-aaa7-04586c6b7dd4\" name=\"Changes\" comment=\"\" />\r\n      <created>1731420800558</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1731420800558</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision 655b4cf0c4fdc4975a757e577a820ae7f7b5327b)
+++++ b/.idea/workspace.xml	(date 1733844909662)
++@@ -4,9 +4,7 @@
++     <option name="autoReloadType" value="SELECTIVE" />
++   </component>
++   <component name="ChangeListManager">
++-    <list default="true" id="cbe76408-9917-4acf-aaa7-04586c6b7dd4" name="Changes" comment="">
++-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
++-    </list>
+++    <list default="true" id="cbe76408-9917-4acf-aaa7-04586c6b7dd4" name="Changes" comment="" />
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++@@ -27,13 +25,13 @@
++     <option name="hideEmptyMiddlePackages" value="true" />
++     <option name="showLibraryContents" value="true" />
++   </component>
++-  <component name="PropertiesComponent">{
++-  &quot;keyToString&quot;: {
++-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
++-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+++  <component name="PropertiesComponent"><![CDATA[{
+++  "keyToString": {
+++    "Python.main.executor": "Run",
+++    "RunOnceActivity.ShowReadmeOnStart": "true",
+++    "git-widget-placeholder": "personnage"
++   }
++-}</component>
+++}]]></component>
++   <component name="RecentsManager">
++     <key name="MoveFile.RECENT_KEYS">
++       <recent name="$PROJECT_DIR$" />
+Index: .idea/projet_pygame.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/.venv\" />\r\n    </content>\r\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.12 (Python)\" jdkType=\"Python SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/projet_pygame.iml b/.idea/projet_pygame.iml
+--- a/.idea/projet_pygame.iml	(revision 522210e93e2d88327892015272a96934ee0a2328)
++++ b/.idea/projet_pygame.iml	(date 1733844198004)
+@@ -4,7 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.12 (Python)" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.12 (Space_invader)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Black\">\r\n    <option name=\"sdkName\" value=\"Python 3.12 (projet_pygame)\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.12 (Python)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 522210e93e2d88327892015272a96934ee0a2328)
++++ b/.idea/misc.xml	(date 1733844198002)
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.12 (projet_pygame)" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (Python)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (Space_invader)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"cbe76408-9917-4acf-aaa7-04586c6b7dd4\" name=\"Changes\" comment=\"\">\r\n\r\n      <change afterPath=\"$PROJECT_DIR$/Blue_rectangle.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/projet_pygame.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/projet_pygame.iml\" afterDir=\"false\" />\r\n\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2okk8OvBCP3wd7IMKWVCYbwjJHd\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Python.main.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"paysage\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$\" />\r\n      <recent name=\"$PROJECT_DIR$/projet_pygame\" />\r\n    </key>\r\n  </component>\r\n\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-abccbe9d933a-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.428\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"cbe76408-9917-4acf-aaa7-04586c6b7dd4\" name=\"Changes\" comment=\"\" />\r\n      <created>1731420800558</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1731420800558</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 522210e93e2d88327892015272a96934ee0a2328)
++++ b/.idea/workspace.xml	(date 1735054060007)
+@@ -4,14 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="cbe76408-9917-4acf-aaa7-04586c6b7dd4" name="Changes" comment="">
+-
+-      <change afterPath="$PROJECT_DIR$/Blue_rectangle.png" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/projet_pygame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet_pygame.iml" afterDir="false" />
+-
++    <list default="true" id="cbe76408-9917-4acf-aaa7-04586c6b7dd4" name="Changes" comment="add .gitignore">
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2024_09_08__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Fondpygame.jpg" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -20,31 +17,34 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="RESET_MODE" value="SOFT" />
++    <option name="ROOT_SYNC" value="DONT_SYNC" />
+   </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 8
+ }</component>
+   <component name="ProjectId" id="2okk8OvBCP3wd7IMKWVCYbwjJHd" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="1" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Python.main.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "paysage"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Python.main.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\peiry\OneDrive - EDUETATFR\Collège Ste-Croix\3BP\OC\000.Projet\projet_pygame" />
+       <recent name="$PROJECT_DIR$" />
+       <recent name="$PROJECT_DIR$/projet_pygame" />
+     </key>
+   </component>
+-
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -61,6 +61,39 @@
+       <option name="presentableId" value="Default" />
+       <updated>1731420800558</updated>
+     </task>
++    <task id="LOCAL-00001" summary="add .gitignore">
++      <option name="closed" value="true" />
++      <created>1735053989135</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1735053989135</updated>
++    </task>
++    <task id="LOCAL-00002" summary="add .gitignore">
++      <option name="closed" value="true" />
++      <created>1735054006189</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1735054006189</updated>
++    </task>
++    <task id="LOCAL-00003" summary="add .gitignore">
++      <option name="closed" value="true" />
++      <created>1735054018488</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1735054018488</updated>
++    </task>
++    <task id="LOCAL-00004" summary="add .gitignore">
++      <option name="closed" value="true" />
++      <created>1735054048885</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1735054048885</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -74,4 +107,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="add .gitignore" />
++    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1735054119062)
++++ b/.gitignore	(date 1735054119062)
+@@ -0,0 +1,4 @@
++.idea/**
++/.idea/
++**.patch
++**.xml
