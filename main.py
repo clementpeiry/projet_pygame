@@ -153,9 +153,9 @@ def main():
                 obstacles.append(ObstacleSol())
             else:
                 obstacles.append(ObstacleAir())
-            rand2 -= 5
-            if rand2 < 20:
-                rand2 = 20
+            rand2 -= 10
+            if rand2 <= 100:
+                rand2 = 100
 
         for obstacle in obstacles[:]:
             obstacle.update()
