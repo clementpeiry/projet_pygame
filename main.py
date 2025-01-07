@@ -1,6 +1,7 @@
 import pygame
 import random
 import sys
+import time
 
 # Initialisation de Pygame
 pygame.init()
@@ -30,6 +31,8 @@ font = pygame.font.SysFont(None, 40)
 # FPS
 clock = pygame.time.Clock()
 FPS = 60
+
+
 
 # Classes
 class Dino:
@@ -116,6 +119,10 @@ def main():
     rand1 = 0
     rand2 = 500
 
+    # Cooldown des obstacles
+    cooldown = 300
+    temps_dernière_apparition = 0
+
     while running:
         screen.fill(BLANC)
         fond.update()
@@ -149,13 +156,15 @@ def main():
 
         # Gestion des obstacles
         if random.randint(rand1, rand2) < 2:
-            if random.choice([True, False]):
-                obstacles.append(ObstacleSol())
-            else:
-                obstacles.append(ObstacleAir())
-            rand2 -= 10
-            if rand2 <= 100:
-                rand2 = 100
+            if pygame.time.get_ticks() >= temps_dernière_apparition + cooldown:
+                temps_dernière_apparition = pygame.time.get_ticks()
+                if random.choice([True, False]):
+                    obstacles.append(ObstacleSol())
+                else:
+                    obstacles.append(ObstacleAir())
+                rand2 -= 7
+                if rand2 <= 100:
+                    rand2 = 100
 
         for obstacle in obstacles[:]:
             obstacle.update()
