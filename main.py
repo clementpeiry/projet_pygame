@@ -37,15 +37,15 @@ class Dino:
         self.image = dino_image
         self.rect = self.image.get_rect()
         self.rect.x = 100
-        self.rect.y = HAUTEUR - 100
+        self.rect.y = HAUTEUR - 80
         self.en_air = False
         self.velocity = 0
 
     def update(self):
         if not self.en_air:
             self.rect.y += self.velocity
-            if self.rect.y > HAUTEUR - 100:
-                self.rect.y = HAUTEUR - 100
+            if self.rect.y > HAUTEUR - 80:
+                self.rect.y = HAUTEUR - 80
                 self.velocity = 0
 
     def jump(self):
@@ -57,8 +57,8 @@ class Dino:
         if self.en_air:
             self.velocity += 1
             self.rect.y += self.velocity
-            if self.rect.y >= HAUTEUR - 100:
-                self.rect.y = HAUTEUR - 100
+            if self.rect.y >= HAUTEUR - 80:
+                self.rect.y = HAUTEUR - 80
                 self.en_air = False
 
 class Fond:
@@ -95,7 +95,7 @@ class Obstacle:
 
 class ObstacleSol(Obstacle):
     def __init__(self):
-        super().__init__(obstacle_sol_image, LARGEUR, HAUTEUR - 50)
+        super().__init__(obstacle_sol_image, LARGEUR, HAUTEUR - 40)
 
 class ObstacleAir(Obstacle):
     def __init__(self):
