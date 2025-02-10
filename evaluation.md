@@ -21,7 +21,7 @@ Votre projet est assez simpliste, trahissant peut-être les problèmes technique
 | Des commits réguliers ont permis d'ajouter des fonctionnalités petit à petit| 1 pt  | 0.5pt  | Votre projet contient de gros changements dans un seul commit, plutôt que de petits commits réguliers |
 
 ## Note
-17.5/21pts
+16.5/21pts
 
 
 5.2/6
